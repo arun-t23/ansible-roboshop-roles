@@ -8,11 +8,7 @@
     name: common
     tasks_from: nodejs.yaml
    
-- name: copy the service file
-  ansible.builtin.copy:
-    src: catalogue.service
-    dest: /etc/systemd/system/catalogue.service
-- name: mongo repo create
+   
   ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
