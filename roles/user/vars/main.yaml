@@ -1,0 +1,2 @@
+REDIS_HOST: redis.cloudquestdev.com
+MONGODB_HOST: mongodb.cloudquestdev.com
