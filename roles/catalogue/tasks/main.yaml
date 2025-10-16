@@ -17,6 +17,7 @@
   ansible.builtin.package:
     name: mongodb-mongosh
     state: present
+    
 - name: connect to mongodb catalogue
   ansible.builtin.command: mongosh {{ MONGODB_HOST }} --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')"
   register: catalogue_output
@@ -25,6 +26,7 @@
 - name: print the catalogue output
   ansible.builtin.debug:
     msg: "{{ catalogue_output }}"
+
 - name: load products in to catalogue
   ansible.builtin.shell: mongosh --host {{ MONGODB_HOST }} </app/db/master-data.js
   when: catalogue_output.stdout | int < 0
@@ -33,7 +35,7 @@
   ansible.builtin.import_role:
     name: common  
     tasks_from: system-setup.yaml
-      
+
 
 
 
