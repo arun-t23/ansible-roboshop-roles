@@ -1,0 +1,3 @@
+- name: cart systemd service daemon reload if service changes
+  ansible.builtin.systemd_service:
+    daemon_reload: true

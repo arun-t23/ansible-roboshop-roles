@@ -1,2 +1,3 @@
 MONGODB_HOST: mongodb.cloudquestdev.com
 REDIS_HOST: redis.cloudquestdev.com
+CATALOGUE_HOST: catalogue.cloudquestdev.com
