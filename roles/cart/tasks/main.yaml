@@ -10,7 +10,7 @@
 
 - name: system setup restart and daemon reload
   ansible.builtin.import_role:
-    name: commom
+    name: common
     tasks_from: system-setup.yaml
 
 
