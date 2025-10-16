@@ -1,12 +1,13 @@
-- name: copy the service file
+- name: copy {{ component }} service
   ansible.builtin.template:
     src: "{{ component }}.service.j2"
     dest: "/etc/systemd/system/{{ component }}.service"
-  notify: daemon_reload
+  notify: daemon reload
 
 
-- name: service start and enable
-  ansible.builtin.systemd_service:
+
+- name: start the service
+  ansible.builtin.service:
     name: "{{ component }}"
     state: restarted
     enabled: yes
