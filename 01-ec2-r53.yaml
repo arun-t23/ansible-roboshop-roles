@@ -9,17 +9,17 @@
     security_group_id: sg-0e26bb3210120668f
     zone_id: "us-east-1"
     domain_name: cloudquestdev.com
-    instances: ## we can pass instance creation through command line using -e
-    - mongodb
-    - redis
-    - mysql
-    - rabbitmq
-    - catalogue
-    - user
-    - shipping
-    - cart
-    - payment
-    - frontend
+    # instances: ## we can pass instance creation through command line using -e
+    # - mongodb
+    # - redis
+    # - mysql
+    # - rabbitmq
+    # - catalogue
+    # - user
+    # - shipping
+    # - cart
+    # - payment
+    # - frontend
 
   tasks:
   - name: create ec2 instance
