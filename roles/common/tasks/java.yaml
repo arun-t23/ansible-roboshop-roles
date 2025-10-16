@@ -5,18 +5,15 @@
   loop:
   - maven
   - mysql
-
-- name: move jar file
-  ansible.builtin.command: mv target/{{ component }}-{{ VERSION }}.jar {{ component }}.jar
-  args:
-    chdir: /app
-
-
 - name: install dependencies
   ansible.builtin.command: mvn clean package
   args:
     chdir: /app
 
+- name: move jar file
+  ansible.builtin.command: mv target/{{ component }}-{{ VERSION }}.jar {{ component }}.jar
+  args:
+    chdir: /app
 
 
   
