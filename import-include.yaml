@@ -1,9 +1,9 @@
-- name: testing the import and include
+- name: include vs import
   hosts: local
   connection: local
   become: yes
   roles:
-  - import-include
+  - include-import
   
   
 
