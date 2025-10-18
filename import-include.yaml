@@ -1,0 +1,5 @@
+- name: testing the import and include
+  hosts: local
+  connection: local
+  become: yes
+  
